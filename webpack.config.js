@@ -96,6 +96,9 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new webpack.NormalModuleReplacementPlugin(/./, resource => resource.request = (() => {
       switch (resource.request) {
+        case './externs.js': return '../../../src/stub'
+        case '../third_party/lighthouse/report-assets/report.js': return '../../../../src/stub'
+        case '../third_party/lighthouse/report-assets/report-generator.js': return '../../../../src/stub'
         case '../third_party/wasmparser/WasmDis.js': return '../../../../src/stub'
         case '../third_party/wasmparser/WasmParser.js': return '../../../../src/stub'
         default: return resource.request
