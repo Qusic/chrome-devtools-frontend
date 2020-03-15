@@ -9,3 +9,4 @@
 ## Known Issues
 
 * Not working on Safari and iOS because of [regex lookbehind assertions](https://bugs.webkit.org/show_bug.cgi?id=174931)
+* Lighthouse not working.
